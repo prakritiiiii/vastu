@@ -1,0 +1,330 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cedarville+Cursive&family=Playwrite+CU:wght@100..400&family=Sacramento&display=swap');
+
+@media screen and (max-width:100%){
+  body{
+    overflow-x: hidden;
+  }
+}
+
+*{
+ overflow-x: hidden;
+}
+
+/* CSS Header.js */
+/* Main container styling */
+.header {
+  background-image: linear-gradient(270deg, hsl(200, 79%, 85%), #fff7b4); 
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  position: fixed;
+  width: 100%; /* Full width */
+  z-index: 100;
+}
+
+/* Logo styling */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon img {
+  width: 190px; /* Default image size */
+  height: auto;
+}
+
+/* Menu button styling for mobile */
+.menu-btn {
+  display: none; /* Hidden by default on large screens */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 30px; 
+}
+
+/* Menu items styling */
+.header-menu {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  overflow: hidden;
+}
+
+.menu {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  padding-right: 30px;
+}
+
+.menu:hover {
+  text-decoration: underline;
+}
+
+/* Responsive dropdown menu for mobile */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .icon img {
+    width: 120px; /* Smaller logo size on tablet screens */
+  }
+
+  .header-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed; /* Fullscreen fixed position */
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 247, 180, 0.95); /* Light background with opacity */
+    z-index: 1000; /* High z-index */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-menu.open {
+    display: flex; /* Show the menu when open */
+  }
+
+  .menu-btn {
+    display: block; /* Show the menu button on mobile */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-right: 20px; /* Ensure button stays in viewport */
+    z-index: 1100;
+  }
+
+  .menu {
+    padding: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu:hover {
+    color: #e74c3c;
+  }
+}
+
+/* For smaller mobile screens */
+@media screen and (max-width: 480px) {
+  .icon img {
+    width: 120px; /* Larger icon size for small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .menu {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .menu-btn {
+    font-size: 20px; /* Adjusted size for smaller screens */
+    padding: 8px;
+    margin-right: 15px; /* Ensure proper spacing */
+  }
+}
+
+
+
+
+/* CSS Footer.js*/
+.footer {
+  background-image: linear-gradient(270deg, hsl(200, 79%, 85%), #fff7b4); 
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  border: none;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .container, .footer-contact {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-right: 40px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+.footer-links {
+  max-width: 100%;
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.footer-links li, .footer-contact li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-bottom {
+  font-size: 12px;
+  color: #000000; 
+  margin: 10px;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Media query for smaller screens (phones, etc.) */
+@media (max-width: 600px) {
+  .footer-links li, .footer-contact li {
+    display: block; /* Stack the list items vertically */
+    margin: 5px 0; /* Space between the items */
+  }
+
+  .footer-contact li {
+    margin: 10px 0; /* More space between email and phone number */
+  }
+}
+
+
+/*HomeComponent.css*/
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.home-container img{
+  max-width: 57%;
+  height: auto;
+  padding: 20px;
+  object-fit: contain;
+  padding-top: 100px;
+}
+
+.book-btn {
+padding: 10px 20px;
+font-size: 16px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+}
+
+.book-btn:hover {
+background-color: #0056b3;
+}
+
+/*Needs.css*/
+
+/* Container styling for all need cards */
+.needs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f7f9fc; /* Light background color */
+}
+
+.needs-container h2{
+  text-align: center;
+}
+/* Styling for each individual card */
+.needs-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for card depth */
+  margin: 15px;
+  padding: 20px;
+  width: calc(30% - 40px); /* Adjust card width, responsive */
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+/* Hover effect for interaction */
+.needs-card:hover {
+  transform: translateY(-10px); /* Subtle hover effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
+}
+
+/* Image styling within the card */
+.needs-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Title styling */
+.needs-title {
+  font-size: 1.4rem;
+  color: #1a81bc; /* Primary color for titles */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Description styling */
+.needs-description {
+  font-size: 1rem;
+  color: #555; /* Muted color for description */
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .needs-card {
+    width: calc(45% - 40px); /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .needs-card {
+    width: calc(100% - 40px); /* Full width for mobile devices */
+  }
+}

@@ -1,0 +1,404 @@
+/* CSS for About*/
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-right: 50px;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+
+/* About Section */
+.about-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Image Slider Section */
+.image-slider {
+  flex: 1;
+  width: 350px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  display: flex;
+  padding: 10px;
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Ensure any excess part of the image is hidden */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Makes sure the image fills the slider box while keeping its aspect ratio */
+  border-radius: 10px; /* Apply border radius to the image as well */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+  }
+
+  .about-content, .image-slider {
+    max-width: 90%; /* Full width for small screens */
+  }
+  .about-content h1{
+    text-align: center;
+  }
+  .image-slider {
+    width: 400px; /* Reduce width for tablets */
+    height: 400px; /* Reduce height accordingly */
+    margin-right: 20px;
+  }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .image-slider {
+    width: 300px; /* Further reduce slider width */
+    height: 300px; /* Further reduce slider height */
+  }
+
+  .about-content {
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+/*Consultation.css*/
+
+.consultation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header styling */
+.consultation-container header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #1a252f;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #2d3b4f;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Step box styling */
+.step {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading in each step */
+.step h3 {
+  color: #1abc9c;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* List styling */
+.step ul {
+  list-style-type: disc;
+  color: #2c3e50;
+}
+
+.step ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #34495e;
+}
+
+.step ul li::marker {
+  color: #1abc9c;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .step h3 {
+    font-size: 1.4em;
+  }
+
+  .step ul li {
+    font-size: 1em;
+  }
+
+  .consultation-container {
+    padding-top: 20px;
+  }
+}
+
+
+/*Article.css*/
+
+/* Main container styling */
+.main-article{
+  padding: 80px 10px 10px;
+}
+
+.article-icon, .article-img{
+  text-align: center;
+}
+.article-icon img{
+  width: 10%;
+}
+.article-img img{
+  width: 50%;
+}
+.attributes img{
+  width: 97%;
+}
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Styling the main heading */
+.article-container h1 {
+  font-size: 2.8em;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* Styling subheadings */
+.article-container h2 {
+  font-size: 2em;
+  color: #34495e;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+
+.article-container h3 {
+  font-size: 1.6em;
+  color: #2c3e50;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+
+/* Paragraph styling for better readability */
+.article-container p {
+  line-height: 1.8;
+  font-size: 1.15em;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Unordered lists styling */
+.article-container ul {
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+
+.article-container ul li {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  color: #34495e;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Styling strong tags for emphasis */
+.article-container strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+  .article-container {
+    padding: 20px;
+  }
+
+  .article-container h1 {
+    font-size: 2.2em;
+  }
+
+  .article-container h2 {
+    font-size: 1.7em;
+  }
+
+  .article-container h3 {
+    font-size: 1.4em;
+  }
+
+  .article-container p, .article-container ul li {
+    font-size: 1.05em;
+  }
+  .article-icon img{
+    width: 25%;
+  }
+  .article-img img{
+    width: 95%;
+  }
+  .attributes img{
+    width: 98%;
+  }
+}
+
+
+/*Contact.css*/
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.profile-section {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.expert-title {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.expert-description {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-button-section {
+  margin-top: 20px;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe54;
+}
+
+@media (max-width: 600px) {
+  .profile-section {
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .expert-description {
+    font-size: 14px;
+  }
+
+  .whatsapp-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
